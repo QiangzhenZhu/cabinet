@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.manage.ManageHomeFragment"
+    tools:ignore="ResourceName">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/title_manage_admin"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/title_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/button_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_deploy"
+        android:button="@null"
+        android:layout_width="209dp"
+        android:layout_height="209dp"
+        android:background="@drawable/button_background"
+        android:drawableTop="@drawable/manange_deploy"
+        android:paddingTop="20dp"
+        android:text="@string/prompt_manage_deploy"
+        android:gravity="center"
+        android:layout_marginStart="271dp"
+        android:layout_marginTop="216dp"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+
+    <Button
+        android:id="@+id/btn_record"
+        android:button="@null"
+        android:layout_width="209dp"
+        android:layout_height="209dp"
+        android:background="@drawable/button_background"
+        android:drawableTop="@drawable/manage_records"
+        android:paddingTop="32dp"
+        android:text="@string/prompt_manage_records"
+        android:gravity="center"
+        android:layout_marginStart="271dp"
+        android:layout_marginTop="126dp"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_deploy"/>
+
+    <Button
+        android:id="@+id/btn_detect"
+        android:button="@null"
+        android:layout_width="209dp"
+        android:layout_height="209dp"
+        android:background="@drawable/button_background"
+        android:drawableTop="@drawable/manage_detect"
+        android:paddingTop="32dp"
+        android:text="@string/prompt_manage_detect"
+        android:gravity="center"
+        android:layout_marginStart="120dp"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toEndOf="@+id/btn_deploy"
+        app:layout_constraintTop_toTopOf="@+id/btn_deploy"/>
+
+    <Button
+        android:id="@+id/btn_system_info"
+        android:button="@null"
+        android:layout_width="209dp"
+        android:layout_height="209dp"
+        android:background="@drawable/button_background"
+        android:drawableTop="@drawable/manage_systeminfo"
+        android:paddingTop="32dp"
+        android:text="@string/prompt_manage_system_info"
+        android:gravity="center"
+        android:layout_marginStart="120dp"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toEndOf="@+id/btn_record"
+        app:layout_constraintTop_toTopOf="@+id/btn_record"/>
+
+</android.support.constraint.ConstraintLayout>

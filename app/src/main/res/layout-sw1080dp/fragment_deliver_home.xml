@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.deliver.DeliverHomeFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/title_courier_home"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/title_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/button_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:layout_marginStart="68dp"
+        android:text="@string/prompt_courier_gerrt"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/title_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_back" />
+
+    <Button
+        android:id="@+id/btn_expired"
+        android:layout_width="281dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/button_background"
+        android:drawableLeft="@drawable/expired_button_bg"
+        android:paddingLeft="20dp"
+        android:textSize="@dimen/input_text_size"
+        android:text="@string/title_courier_record"
+        android:textColor="@color/colorInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_explain"/>
+
+    <TextView
+        android:id="@+id/tv_box_surplus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="157dp"
+        android:text="@string/prompt_courier_surplus"
+        android:textColor="@color/colorFocused"
+        android:textSize="@dimen/title_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_explain" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_box_surplus">
+        <Button
+            android:id="@+id/btn_large_box"
+            android:button="@null"
+            android:layout_width="311dp"
+            android:layout_height="369dp"
+            android:background="@drawable/button_box_background"
+            android:drawableTop="@drawable/large_box"
+            android:paddingTop="32dp"
+            android:text="@string/prompt_courier_large_box"
+            android:gravity="center"
+            android:textColor="@color/colorInfo"
+            android:textSize="@dimen/title_text_size"/>
+        <Button
+            android:id="@+id/btn_middle_box"
+            android:button="@null"
+            android:layout_width="210dp"
+            android:layout_height="369dp"
+            android:layout_marginLeft="73dp"
+            android:background="@drawable/button_box_background"
+            android:drawableTop="@drawable/middle_box"
+            android:paddingTop="92dp"
+            android:text="@string/prompt_courier_middle_box"
+            android:gravity="center"
+            android:textColor="@color/colorInfo"
+            android:textSize="@dimen/title_text_size"/>
+        <Button
+            android:id="@+id/btn_small_box"
+            android:button="@null"
+            android:layout_width="177dp"
+            android:layout_height="369dp"
+            android:layout_marginLeft="62dp"
+            android:background="@drawable/button_box_background"
+            android:drawableTop="@drawable/small_box"
+            android:paddingTop="130dp"
+            android:text="@string/prompt_courier_small_box"
+            android:gravity="center"
+            android:textColor="@color/colorInfo"
+            android:textSize="@dimen/title_text_size"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

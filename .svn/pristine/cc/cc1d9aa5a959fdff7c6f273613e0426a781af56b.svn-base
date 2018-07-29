@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.manage.ManageBoxDetectFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/prompt_manage_detect"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/title_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/button_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_full_open"
+        android:layout_width="116dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_positive_bg"
+        android:textColor="@color/colorWhite"
+        android:text="@string/prompt_manage_full_open"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_box_layout"
+        android:layout_width="118dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_background"
+        android:text="@string/prompt_manage_box_layout"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/prompt_info_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_box_layout"
+        android:layout_width="943dp"
+        android:layout_height="960dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="235dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

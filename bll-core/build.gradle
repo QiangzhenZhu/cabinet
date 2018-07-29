@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compileOnly files('libs/dcdz-common-toolkits-1.0.0.jar')
+    implementation project(path: ':persistent')
+    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation project(':device')
+    compileOnly files('libs/commons-lang3-3.4.jar')
+    implementation project(path: ':persistent')
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'org.java-websocket:Java-WebSocket:1.3.8'
+}
+
+def SDK_NAME = "dcdz-app-bll";
+def SDK_VERSION = "-1.0.0";
+def sdkDestinationPath = "build";
+def zipFile = file('build/intermediates/intermediate-jars/release/classes.jar')
+
+task deleteBuild(type: Delete) {
+    delete sdkDestinationPath + SDK_NAME + SDK_VERSION + ".jar"
+}
+
+task makeJar(type: Jar) {
+    from zipTree(zipFile)
+    from fileTree(dir: 'src/main')
+    baseName = SDK_NAME + SDK_VERSION
+    destinationDir = file(sdkDestinationPath)
+}
+
+makeJar.dependsOn(deleteBuild, build)

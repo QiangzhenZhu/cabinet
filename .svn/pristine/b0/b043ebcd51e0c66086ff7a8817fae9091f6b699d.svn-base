@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.pickup.PickupCodeFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/title_pickup_code"
+        android:textColor="@color/colorInfo"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.hzdongcheng.parcellocker.utils.RichEditText
+        android:id="@+id/et_open_code"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="@dimen/edit_text_hegiht"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="322dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_pickup_open_code"
+        android:inputType="number"
+        android:textColor="@color/colorInfo"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:next="@+id/et_keyboard" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_submit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="9dp"
+        android:maxWidth="400dp"
+        android:textColor="@color/colorError"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/bt_submit"
+        app:layout_constraintEnd_toEndOf="@+id/bt_submit"
+        app:layout_constraintStart_toStartOf="@+id/bt_submit"/>
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="398dp"
+        android:layout_height="67dp"
+        android:layout_alignStart="@+id/et_open_code"
+        android:layout_below="@+id/et_open_code"
+        android:layout_marginTop="137dp"
+        android:background="@drawable/button_positive_bg"
+        android:text="@string/prompt_sure"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/input_text_size"
+        app:layout_constraintStart_toStartOf="@+id/et_open_code"
+        app:layout_constraintTop_toBottomOf="@+id/et_open_code"/>
+
+
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/button_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
